@@ -1,5 +1,5 @@
 // This is a a quick and dirty program to export user's playlists from Spotify.
-// Jeavily based on examples from https://github.com/zmb3/spotify/tree/master/examples.
+// Heavily based on examples from https://github.com/zmb3/spotify/tree/master/examples.
 //
 // In order for this program to work one needs to:
 //
