@@ -12,7 +12,7 @@
 // Example usage:
 //
 //	export SPOTIFY_ID=xxxxx
-//  export SPOTIFY_SECRET=xxxxx
+//	export SPOTIFY_SECRET=xxxxx
 //
 //  spexport > playlists.json
 
