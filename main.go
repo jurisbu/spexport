@@ -95,7 +95,7 @@ func main() {
 			releaseData := v.Track.Track.Album.ReleaseDate
 
 			t := Track{
-				Name:        trackName,
+				TrackTitle:  trackName,
 				ArtistName:  artistName,
 				AlbumName:   albumName,
 				ReleaseDate: releaseData,
@@ -107,7 +107,10 @@ func main() {
 	}
 
 	// Marshal as JSON to STDOUT.
-	if err := json.NewEncoder(os.Stdout).Encode(playlists); err != nil {
+	jsonEnc := json.NewEncoder(os.Stdout)
+	// Pretty print JSON.
+	jsonEnc.SetIndent("", "  ")
+	if err := jsonEnc.Encode(playlists); err != nil {
 		log.Panic(err)
 	}
 }
@@ -157,7 +160,7 @@ type Playlist struct {
 }
 
 type Track struct {
-	Name        string
+	TrackTitle  string
 	ArtistName  string
 	AlbumName   string
 	ReleaseDate string
